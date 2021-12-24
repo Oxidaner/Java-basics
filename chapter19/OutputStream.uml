@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.io.OutputStream</OriginalElement>
+  <nodes>
+    <node x="204.75" y="210.0">java.io.OutputStream</node>
+    <node x="291.75" y="105.0">java.io.Closeable</node>
+    <node x="0.0" y="317.0">java.io.FileOutputStream</node>
+    <node x="274.25" y="0.0">java.lang.AutoCloseable</node>
+    <node x="283.0" y="397.5">java.io.BufferedOutputStream</node>
+    <node x="143.75" y="105.0">java.io.Flushable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.io.BufferedOutputStream" target="java.io.OutputStream">
+      <point x="0.0" y="-73.0" />
+      <point x="432.0" y="292.0" />
+      <point x="320.25" y="292.0" />
+      <point x="38.5" y="28.5" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-27.5" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="java.io.FileOutputStream" target="java.io.OutputStream">
+      <point x="0.0" y="-153.5" />
+      <point x="131.5" y="292.0" />
+      <point x="243.25" y="292.0" />
+      <point x="-38.5" y="28.5" />
+    </edge>
+    <edge source="java.io.OutputStream" target="java.io.Flushable">
+      <point x="-38.5" y="-28.5" />
+      <point x="243.25" y="185.0" />
+      <point x="207.75" y="185.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+    <edge source="java.io.OutputStream" target="java.io.Closeable">
+      <point x="38.5" y="-28.5" />
+      <point x="320.25" y="185.0" />
+      <point x="355.75" y="185.0" />
+      <point x="0.0" y="27.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="170.0" y="288.0" />
+  <SelectedNodes>
+    <node>java.io.BufferedOutputStream</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
