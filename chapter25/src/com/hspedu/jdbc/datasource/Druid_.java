@@ -1,7 +1,8 @@
 package com.hspedu.jdbc.datasource;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import javax.sql.DataSource;
 import java.io.FileInputStream;

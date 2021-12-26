@@ -2,7 +2,7 @@ package com.hspedu.dao_.test;
 
 import com.hspedu.dao_.dao.ActorDAO;
 import com.hspedu.dao_.domain.Actor;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.List;
 

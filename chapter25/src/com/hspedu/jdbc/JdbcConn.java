@@ -1,7 +1,7 @@
 package com.hspedu.jdbc;
 
 import com.mysql.jdbc.Driver;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

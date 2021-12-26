@@ -1,7 +1,8 @@
 package com.hspedu.jdbc.transaction_;
 
 import com.hspedu.jdbc.utils.JDBCUtils;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

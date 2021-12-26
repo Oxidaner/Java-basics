@@ -1,7 +1,8 @@
 package com.hspedu.jdbc.temp_;
 
 import com.hspedu.jdbc.utils.JDBCUtils;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
 
 import java.sql.Connection;
 

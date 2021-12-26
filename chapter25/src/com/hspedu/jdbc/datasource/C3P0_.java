@@ -2,7 +2,8 @@ package com.hspedu.jdbc.datasource;
 
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
 import java.io.FileInputStream;
 import java.sql.Connection;
 import java.sql.SQLException;

@@ -5,7 +5,8 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,6 +1,5 @@
 package com.hspedu.jdbc.myjdbc;
 
-import org.junit.jupiter.api.Test;
 
 import java.io.FileInputStream;
 import java.sql.Connection;
