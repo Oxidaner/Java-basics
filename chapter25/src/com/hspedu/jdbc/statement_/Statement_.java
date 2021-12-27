@@ -46,7 +46,7 @@ public class Statement_ {
         String sql = "select name , pwd  from admin where name ='"
                 + admin_name + "' and pwd = '" + admin_pwd + "'";
         ResultSet resultSet = statement.executeQuery(sql);
-        if (resultSet.next()) { //如果查询到一条记录，则说明该管理存在
+        if (resultSet.next()) { //如果查询到一条记录，则说明该管理员存在
             System.out.println("恭喜， 登录成功");
         } else {
             System.out.println("对不起，登录失败");

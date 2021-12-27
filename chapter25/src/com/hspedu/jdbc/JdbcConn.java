@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -22,29 +23,29 @@ public class JdbcConn {
     @Test
     public void connect01() throws SQLException {
         Driver driver = new Driver(); //创建driver对象
-        String url = "jdbc:mysql://localhost:3306/hsp_db02";
+        String url = "jdbc:mysql://localhost:3306/student_management";
         //将 用户名和密码放入到Properties 对象
         Properties properties = new Properties();
         //说明 user 和 password 是规定好，后面的值根据实际情况写
-        properties.setProperty("user", "root");// 用户
-        properties.setProperty("password", "hsp"); //密码
+        properties.setProperty("user", "zzb");// 用户
+        properties.setProperty("password", "123456"); //密码
         Connection connect = driver.connect(url, properties);
         System.out.println(connect);
     }
 
     //方式2
     @Test
-    public void connect02() throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException {
+    public void connect02() throws ClassNotFoundException, IllegalAccessException, InstantiationException, SQLException, NoSuchMethodException, InvocationTargetException {
         //使用反射加载Driver类 , 动态加载，更加的灵活，减少依赖性
         Class<?> aClass = Class.forName("com.mysql.jdbc.Driver");
-        Driver driver = (Driver)aClass.newInstance();
+        Driver driver = (Driver)aClass.getDeclaredConstructor().newInstance();
 
-        String url = "jdbc:mysql://localhost:3306/hsp_db02";
+        String url = "jdbc:mysql://localhost:3306/student_management";
         //将 用户名和密码放入到Properties 对象
         Properties properties = new Properties();
         //说明 user 和 password 是规定好，后面的值根据实际情况写
-        properties.setProperty("user", "root");// 用户
-        properties.setProperty("password", "hsp"); //密码
+        properties.setProperty("user", "zzb");// 用户
+        properties.setProperty("password", "123456"); //密码
 
         Connection connect = driver.connect(url, properties);
         System.out.println("方式2=" + connect);
