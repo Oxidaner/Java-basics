@@ -1,4 +1,4 @@
-package com.hspedu.jdbc.datasource;
+package jdbc.datasource;
 
 import java.util.Date;
 

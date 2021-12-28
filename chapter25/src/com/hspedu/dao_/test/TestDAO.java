@@ -1,6 +1,6 @@
-package com.hspedu.dao_.test;
+package dao_.test;
 
-import com.hspedu.dao_.dao.ActorDAO;
+import dao_.dao.ActorDAO;
 import com.hspedu.dao_.domain.Actor;
 import org.junit.Test;
 

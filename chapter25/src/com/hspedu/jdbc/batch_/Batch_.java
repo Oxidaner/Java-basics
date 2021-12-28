@@ -1,11 +1,10 @@
-package com.hspedu.jdbc.batch_;
+package jdbc.batch_;
 
 import com.hspedu.jdbc.utils.JDBCUtils;
 import org.junit.Test;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * @author 韩顺平

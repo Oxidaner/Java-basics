@@ -1,13 +1,10 @@
-package com.hspedu.jdbc.datasource;
+package jdbc.datasource;
 
 import com.alibaba.druid.pool.DruidDataSourceFactory;
 import org.junit.Test;
 
-
 import javax.sql.DataSource;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.sql.Connection;
 import java.util.Properties;
 
@@ -33,7 +30,7 @@ public class Druid_ {
         long start = System.currentTimeMillis();
         for (int i = 0; i < 500000; i++) {
             Connection connection = dataSource.getConnection();
-            System.out.println(connection.getClass());
+//            System.out.println(connection.getClass());
             //System.out.println("连接成功!");
             connection.close();
         }

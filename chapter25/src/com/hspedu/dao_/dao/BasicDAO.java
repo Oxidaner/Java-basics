@@ -1,6 +1,6 @@
-package com.hspedu.dao_.dao;
+package dao_.dao;
 
-import com.hspedu.dao_.utils.JDBCUtilsByDruid;
+import jdbc.datasource.JDBCUtilsByDruid;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;

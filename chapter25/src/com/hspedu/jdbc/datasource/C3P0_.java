@@ -1,6 +1,4 @@
-package com.hspedu.jdbc.datasource;
-
-
+package jdbc.datasource;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.testng.annotations.Test;
 
@@ -62,14 +60,14 @@ public class C3P0_ {
     @Test
     public void testC3P0_02() throws SQLException {
 
-        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource("hsp_edu");
-
+        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource("hsp");
+        System.out.println(comboPooledDataSource);
         //测试5000次连接mysql
         long start = System.currentTimeMillis();
         System.out.println("开始执行....");
         for (int i = 0; i < 500000; i++) {
             Connection connection = comboPooledDataSource.getConnection();
-            //System.out.println("连接OK~");
+            System.out.println("连接OK~");
             connection.close();
         }
         long end = System.currentTimeMillis();

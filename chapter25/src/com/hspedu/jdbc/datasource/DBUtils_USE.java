@@ -1,4 +1,4 @@
-package com.hspedu.jdbc.datasource;
+package jdbc.datasource;
 
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -7,9 +7,8 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 import org.testng.annotations.Test;
 
-
-import java.sql.*;
-import java.util.ArrayList;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
 
 /**

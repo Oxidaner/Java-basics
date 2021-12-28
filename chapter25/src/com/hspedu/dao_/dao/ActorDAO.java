@@ -1,4 +1,4 @@
-package com.hspedu.dao_.dao;
+package dao_.dao;
 
 import com.hspedu.dao_.domain.Actor;
 
