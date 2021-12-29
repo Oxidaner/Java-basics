@@ -67,7 +67,7 @@ public class C3P0_ {
         System.out.println("开始执行....");
         for (int i = 0; i < 500000; i++) {
             Connection connection = comboPooledDataSource.getConnection();
-            System.out.println("连接OK~");
+//            System.out.println("连接OK~");
             connection.close();
         }
         long end = System.currentTimeMillis();

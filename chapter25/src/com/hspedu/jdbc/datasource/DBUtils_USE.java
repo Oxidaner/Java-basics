@@ -30,7 +30,7 @@ public class DBUtils_USE {
         //4. 就可以执行相关的方法，返回ArrayList 结果集
         //String sql = "select * from actor where id >= ?";
         //   注意: sql 语句也可以查询部分列
-        String sql = "select id, name from actor where id >= ?";
+        String sql = "select * from actor where id >= ?";
         // 老韩解读
         //(1) query 方法就是执行sql 语句，得到resultset ---封装到 --> ArrayList 集合中
         //(2) 返回集合
@@ -91,7 +91,7 @@ public class DBUtils_USE {
         String sql = "select * from actor where id = ?";
         // 老韩解读
         // 因为我们返回的单行记录<--->单个对象 , 使用的Hander 是 BeanHandler
-        Actor actor = queryRunner.query(connection, sql, new BeanHandler<>(Actor.class), 10);
+        Actor actor = queryRunner.query(connection, sql, new BeanHandler<>(Actor.class), 1);
         System.out.println(actor);
 
         // 释放资源
@@ -112,7 +112,7 @@ public class DBUtils_USE {
         //4. 就可以执行相关的方法，返回单行单列 , 返回的就是Object
         String sql = "select name from actor where id = ?";
         //老师解读： 因为返回的是一个对象, 使用的handler 就是 ScalarHandler
-        Object obj = queryRunner.query(connection, sql, new ScalarHandler(), 4);
+        Object obj = queryRunner.query(connection, sql, new ScalarHandler(), 2);
         System.out.println(obj);
 
         // 释放资源
@@ -138,7 +138,7 @@ public class DBUtils_USE {
         //(1) 执行dml 操作是 queryRunner.update()
         //(2) 返回的值是受影响的行数 (affected: 受影响)
         //int affectedRow = queryRunner.update(connection, sql, "林青霞", "女", "1966-10-10", "116");
-        int affectedRow = queryRunner.update(connection, sql, 1000 );
+        int affectedRow = queryRunner.update(connection, sql, 5 );
         System.out.println(affectedRow > 0 ? "执行成功" : "执行没有影响到表");
 
         // 释放资源

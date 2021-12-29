@@ -1,7 +1,9 @@
 package dao_.test;
 
-import dao_.dao.ActorDAO;
 import com.hspedu.dao_.domain.Actor;
+import dao_.dao.ActorDAO;
+import dao_.dao.GoodsDAO;
+import dao_.domain.Goods;
 import org.junit.Test;
 
 import java.util.List;
@@ -42,5 +44,31 @@ public class TestDAO {
 
 
 
+    }
+    @Test
+    public void testGoodsDAO() {
+        GoodsDAO goodsDAO = new GoodsDAO();
+        //1. 查询
+        List<Goods> goods = goodsDAO.queryMulti("select * from Goods where id >= ?", Goods.class, 1);
+        System.out.println("====查询结果====");
+        for (Object good : goods) {
+            System.out.println(good);
+        }
+
+        //2. 查询单行
+        Goods good = goodsDAO.querySingle("select * from Goods where id = ? ", Goods.class, 30);
+        System.out.println("====查询结果====");
+        System.out.println(good);
+
+        //3. 查询多行
+        Object o = goodsDAO.queryScalar("select goods_name from Goods where id = ? ", 40);
+        System.out.println("====查询结果====");
+        System.out.println(o);
+
+        //4.dml操作
+        int update = goodsDAO.update("insert into Goods values(?,?,?)","1","华为","10000");
+        if (update>0) {
+            System.out.println("成功");
+        }
     }
 }
